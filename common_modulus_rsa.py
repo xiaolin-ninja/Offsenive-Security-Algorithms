@@ -20,9 +20,9 @@ def common_modulus_attack(c1, c2, e1, e2, n):
     b = float(1 - (a * e1)) / e2
 
     i = gmpy2.invert(c2, n)
-    mx = pow(c1, a, n)
-    my = pow(i, int(-b), n)
-    return mx * my % n
+    ma = pow(c1, a, n)
+    mb = pow(i, int(-b), n)
+    return ma * mb % n
 
 def main():
     args = parser.parse_args()
