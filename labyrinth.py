@@ -22,7 +22,6 @@ Graph = {
     'j': Node('j','d',0x2c6)
     }
 
-
 goal = 0x257B
 
 
@@ -36,7 +35,6 @@ def traverse(node = 'a', total = 0, path = ""):
     return path, total
 
 
-
 def solve(target):
     target.readline()
     path = traverse()[0]
@@ -46,10 +44,6 @@ def solve(target):
     return target.recvline()
 
 
-
-def main():
-    print(solve(target))
-
 if __name__ == '__main__':
-    main()
+    print(solve(target))
 
