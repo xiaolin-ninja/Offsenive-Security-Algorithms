@@ -38,10 +38,10 @@ def traverse(node = 'a', total = 0, path = ""):
 
 
 def solve(target):
-    target.readline()   
-    solve = traverse()
-    print(solve)
-    target.sendline(solve[0])
+    target.readline()
+    path = traverse()[0]
+    print(path)
+    target.sendline(path)
     print(target.recvline())
     return target.recvline()
 
