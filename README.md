@@ -1,5 +1,5 @@
 # Offsenive-Security-Algorithms
-Let my suffering turn into your laziness. Hope these help with your homework.
+Let my suffering enable your laziness. Hope these help with your learning goals.
 
 These are accompanying algorithms to my blog:
 https://identitystudies.wordpress.com/
