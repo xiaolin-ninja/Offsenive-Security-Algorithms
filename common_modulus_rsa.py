@@ -2,7 +2,7 @@ import gmpy2
 import argparse
 from math import gcd
 
-parser = argparse.ArgumentParser(description='RSA Common modulus attack')
+parser = argparse.ArgumentParser(description='RSA Common Modulus Attack')
 required_named = parser.add_argument_group('required named arguments')
 required_named.add_argument('-n', '--modulus', help='Common modulus', type=int, required=True)
 required_named.add_argument('-e1', '--key1', help='First public key', type=int, required=True)
@@ -13,7 +13,7 @@ required_named.add_argument('-c2', '--ciphertext2', help='Second ciphertext', ty
 
 def common_modulus_attack(c1, c2, e1, e2, n):
     if gcd(e1, e2) != 1:
-        raise ValueError("Common modulus attack requires gcd(e1,e2) = 1.")
+        raise ValueError("Requires gcd(e1,e2) = 1.")
         
     a = gmpy2.invert(e1, e2)
     b = float(1 - (a * e1)) / e2
@@ -25,14 +25,14 @@ def common_modulus_attack(c1, c2, e1, e2, n):
 
 def main():
     args = parser.parse_args()
-    print('Starting attack...')
+    print("Attempting...")
 
     try:
         result = hex(common_modulus_attack(args.ciphertext1, args.ciphertext2, args.key1, args.key2, args.modulus))[2:]
         print('Success!')
         print(bytes.fromhex(result).decode("ASCII"))
     except Exception as e:
-        print('Attack failed!')
+        print('Failed!')
         print(e)
 
 
