@@ -2,4 +2,10 @@
 Let my suffering turn into your laziness. Hope these help with your homework.
 
 These are accompanying algorithms to my blog:
-identitystudies.wordpress.com
+https://identitystudies.wordpress.com/
+
+
+My resume website:
+https://www.xiaolin.ninja/
+
+Thanks for stopping by, have a good one. :)
